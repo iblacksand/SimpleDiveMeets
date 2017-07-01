@@ -4,7 +4,20 @@
         <link rel="stylesheet" type="text/css" href="./node_modules/bulma/css/bulma.css">
     </head>
     <body>
+        <center>
+            <nav class="nav has-shadow">
+                <div class="<nav-lef></nav-lef>t">
+                    <a class="nav-item" id="exit"> &lt;  Back </a>
+                </div>
+            </nav>
+        </center>
     <script>
+        var $ =require('jquery');
+         const remote = require('electron').remote;
+        $('#exit').on('click',function(){
+            var window = remote.getCurrentWindow();
+            window.close();
+        });
     </script>
     </body>
 </html>

@@ -10,7 +10,7 @@
         <h1 class="title is-1">
             <center>Simple Dive Meets</center> 
         </h1>
-        <h2 class="title is-4"><center>Welcome to Simple Divemeets</center></h2>
+        <h2 class="subtitle is-4"><center>Welcome to Simple Divemeets</center></h2>
         <center>Click any of the buttons below to start</center>
     </div>
 
@@ -27,11 +27,15 @@
         const url = require('url')
         var $ = require('jquery')
         let win
+        let userpg
 
         $('#startsearch').on('click', function(){
             win = window.open("./divesearch.html");
-
         });
+
+        $('#userbutton').on('click', function(){
+            userpg = window.open("./userpage.html");
+        })
 
         const remote = require('electron').remote;
         $('#closebutton').on('click',function(){
