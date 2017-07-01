@@ -4,16 +4,39 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
     <link rel="stylesheet" type="text/css" href="./node_modules/bulma/css/bulma.css">
+
+    <script type="text/javascript" src="DiveList.json"></script>
   </head>
   <body>
 
-    <div>
+    <div class="content">
     <h1 class="title">Hello World!</h1>
     We are using node <script>document.write(process.versions.node)</script>,
     Chrome <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
   </div>
-    <a class="button">text</a>
+  <div class="content">
+    <input id="searchbox" class="input" type="text" placeholder="Text input">
+  </div>
+  <div>
+    <textarea class="textarea" placeholder="Textarea" id="results"></textarea>
 
+  </div>
+
+  <table id="mytable" class="table">
+    <thead class=>
+      <tr>
+        <th>Dive Code</th>
+        <th>Dive Description</th>
+        <th>DD</th>
+      </tr>
+    </thead>
+  </table>
+
+  <script>
+    require('./searchdives')
+    require('./node_modules/fuse.js/src/index')
+    //require('./main')
+  </script>
   </body>
 </html>
