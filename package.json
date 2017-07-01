@@ -1,0 +1,8 @@
+{
+  "name": "simpledivemeets",
+  "version": "0.0.1",
+  "main": "main.js",
+  "dependencies": {
+    "bulma": "0.4.2"
+  }
+}
