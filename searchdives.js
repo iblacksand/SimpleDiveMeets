@@ -20,7 +20,6 @@ readTextFile("./DiveList.json", function(text){
     data = JSON.parse(text);
 });
 
-
 function set(){
   document.getElementById('searchbox').onchange = search;
 }
