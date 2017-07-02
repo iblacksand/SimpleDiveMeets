@@ -1,6 +1,6 @@
 const Fuse = require('Fuse.js');
-const {app, BrowserWindow,win} = require('electron')
-var $ = require('jQuery')
+const {app, BrowserWindow,win} = require('electron');
+var $ = require('jQuery');
 
 $('#searchbox').on('change', search);
 
@@ -12,11 +12,11 @@ function readTextFile(file, callback) {
         if (rawFile.readyState === 4 && rawFile.status == "200") {
             callback(rawFile.responseText);
         }
-    }
+    };
     rawFile.send(null);
 }
 var data;
-readTextFile("./DiveList.json", function(text){
+readTextFile("./Users.json", function(text){
     data = JSON.parse(text);
 });
 
