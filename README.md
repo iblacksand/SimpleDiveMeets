@@ -6,7 +6,7 @@ This is going to be a tool to run basic dive meets, where a very complex program
 
 - [x] Dive Search
 - [ ] User page where you can edit the list of dives
-- [ ] import google forms results for sign-ups
+- [ ] Import google forms results for sign-ups
 - [ ] Sequential Dive Meet Runner
 - [ ] Sheet Editor
 - [ ] Announcer Script Maker
@@ -20,5 +20,5 @@ For now the only way to build this would be
 git clone https://github.com/iblacksand/SimpleDiveMeets.git
 cd SimpleDiveMeets
 npm install
-electron .
+npm start
 ```
