@@ -3,6 +3,9 @@ dist: trusty
 
 language: c
 
+services:
+  - docker
+
 matrix:
   include:
     - os: linux
@@ -44,5 +47,6 @@ before_script:
   - sleep 3
 
 script:
+  - docker run --rm -ti -v ${PWD}:/project -v ${PWD##*/}-node-modules:/project/node_modules -v ~/.electron:/root/.electron electronuserland/electron-builder:wine
   - node_modules/.bin/electron-builder build -w
   - node_modules/.bin/electron-builder build
