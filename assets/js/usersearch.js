@@ -20,10 +20,6 @@ readTextFile("./Users.json", function(text){
     data = JSON.parse(text);
 });
 
-function set(){
-  document.getElementById('searchbox').onchange = search;
-}
-set();
 var options = {
   shouldSort: true,
   threshold: 0.6,
