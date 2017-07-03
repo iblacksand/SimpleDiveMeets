@@ -1,5 +1,6 @@
+sudo: required
 install:
 - npm install
-- npm install electron
+- npm install -g electron
 
 script: npm start
