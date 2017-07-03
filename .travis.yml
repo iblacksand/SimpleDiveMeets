@@ -44,6 +44,5 @@ before_script:
   - sleep 3
 
 script:
-  - node_modules/.bin/electron-builder build -l
-  - node_modules/.bin/electron-builder build -w
-  - node_modules/.bin/electron-builder build -m
+  - npm run dist:osx && npm run dist:win32 && npm run dist:win64
+  - node_modules/.bin/electron-builder build
