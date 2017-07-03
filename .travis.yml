@@ -1,6 +1,5 @@
 sudo: required
 install:
 - npm install
-- npm install -g electron
 
 script: npm start
