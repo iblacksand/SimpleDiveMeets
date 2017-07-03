@@ -33,7 +33,7 @@ install:
   - nvm install 6
   - npm install
   - npm install electron-builder@next
-  - npm install electron-prebuilt -g
+  - npm install electron -g
   - npm install
   - export DISPLAY=':99.0'
   - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
@@ -44,5 +44,5 @@ before_script:
   - sleep 3
 
 script:
-  - npm run dist:win32 && npm run dist:win64
+  - node_modules/.bin/electron-builder build -w
   - node_modules/.bin/electron-builder build
