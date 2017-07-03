@@ -1,9 +1,15 @@
 {
   "name": "simpledivemeets",
+  "description": "A tool to run simple dive meets",
+  "author": "John Elizarraras",
   "version": "0.0.1",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "buildlinux":"electron-builder -l"
   },
   "dependencies": {
     "bulma": "0.4.2",
@@ -11,6 +17,7 @@
     "jQuery": "^1.7.4"
   },
   "devDependencies": {
-    "electron": "^1.6.11"
+    "electron": "^1.6.11",
+    "electron-builder": "^19.12.0"
   }
 }

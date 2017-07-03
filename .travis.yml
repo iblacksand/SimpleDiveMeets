@@ -45,4 +45,4 @@ before_script:
   - sleep 3
 
 script:
-  - npm start
+  - node_modules/.bin/electron-builder build
