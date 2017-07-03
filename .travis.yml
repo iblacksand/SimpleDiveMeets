@@ -1,3 +1,5 @@
-install: npm install
+install:
+- npm install
+- npm install electron-builder@next
 
-script: npm run
+script: npm start
