@@ -1,6 +1,6 @@
 # Simple Dive Meets
 
-![](https://travis-ci.org/iblacksand/SimpleDiveMeets.svg?branch=master)
+[![Build Status](https://travis-ci.org/iblacksand/SimpleDiveMeets.svg?branch=master)](https://travis-ci.org/iblacksand/SimpleDiveMeets)
 
 This is going to be a tool to run basic dive meets, where a very complex program isn't needed. It is not very functional at the moment.
 
