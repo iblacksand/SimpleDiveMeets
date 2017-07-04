@@ -16,6 +16,9 @@ matrix:
 node_js:
   - 6
 
+before_install:
+  - sudo apt-get -qq update
+
 cache:
   directories:
     - node_modules
