@@ -32,8 +32,6 @@ addons:
 
 install:
   - nvm install 6
-  - npm install
-  - npm install electron-builder@next
   - npm install electron -g
   - npm install
   - export DISPLAY=':99.0'
