@@ -1,6 +1,6 @@
 sudo: required
 dist: trusty
-
+osx_image: xcode8.3
 language: c
 
 services:
@@ -8,6 +8,7 @@ services:
 
 matrix:
   include:
+    - os: osx
     - os: linux
       env: CC=clang CXX=clang++ npm_config_clang=1
       compiler: clang
@@ -33,6 +34,7 @@ addons:
       - xvfb
 
 install:
+  - apt-get install --no-install-recommends -y gcc-multilib g++-multilib
   - nvm install 6
   - npm install
   - npm install electron-builder@next
@@ -47,6 +49,4 @@ before_script:
   - sleep 3
 
 script:
-  - docker run --rm -ti -v ${PWD}:/project -v ${PWD##*/}-node-modules:/project/node_modules -v ~/.electron:/root/.electron electronuserland/electron-builder:wine
-  - node_modules/.bin/electron-builder build -w
   - node_modules/.bin/electron-builder build

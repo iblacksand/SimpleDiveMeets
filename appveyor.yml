@@ -1,0 +1,20 @@
+platform:
+  - x64
+
+cache:
+  - node_modules
+  - '%APPDATA%\npm-cache'
+  - '%USERPROFILE%\.electron'
+
+install:
+  - ps: Install-Product node 7 x64
+  - npm install
+
+build_script:
+  - node_modules/.bin/electron-builder build
+
+test: off
+
+environment:
+  GH_TOKEN:
+    secure: H2b1mq+K/miUzkxP1jtaiNwonVsUPMDxqtQknijwNFCmIFjz0DFF7ktgXZ8nzA81
