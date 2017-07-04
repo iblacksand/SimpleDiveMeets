@@ -6,7 +6,6 @@ language: c
 matrix:
   include:
     - os: osx
-    - os: linux
       env: CC=clang CXX=clang++ npm_config_clang=1
       compiler: clang
 
@@ -43,4 +42,4 @@ before_script:
   - sleep 3
 
 script:
-  - node_modules/.bin/electron-builder build
+  - npm run dist
