@@ -45,4 +45,4 @@ before_script:
   - sleep 3
 
 script:
-  - node_modules/.bin/electron-builder build
+  - sudo node_modules/.bin/electron-builder build
