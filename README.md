@@ -1,8 +1,9 @@
 # Simple Dive Meets
 
-Linux and OSX: [![Build Status](https://travis-ci.org/iblacksand/SimpleDiveMeets.svg?branch=master)](https://travis-ci.org/iblacksand/SimpleDiveMeets)
+Linux: [![Build Status](https://travis-ci.org/iblacksand/SimpleDiveMeets.svg?branch=master)](https://travis-ci.org/iblacksand/SimpleDiveMeets)
 
 Windows: [![Build status](https://ci.appveyor.com/api/projects/status/h3sjba5d46oyrugq?svg=true)](https://ci.appveyor.com/project/iblacksand/simpledivemeets)
+
 
 
 This is going to be a tool to run basic dive meets, where a very complex program isn't needed. It is not very functional at the moment.
