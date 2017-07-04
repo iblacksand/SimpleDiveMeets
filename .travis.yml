@@ -3,8 +3,9 @@ dist: trusty
 osx_image: xcode8.3
 language: c
 
-services:
-  - docker
+
+before_install:
+  - sudo apt-get -qq update
 
 matrix:
   include:
@@ -15,10 +16,7 @@ matrix:
 
 node_js:
   - 6
-
-before_install:
-  - apt-get -qq update
-
+  
 cache:
   directories:
     - node_modules
@@ -37,7 +35,7 @@ addons:
       - xvfb
 
 install:
-  - apt-get install --no-install-recommends -y gcc-multilib g++-multilib
+  - apt-get install --no-install-recommends -y gcc-multilib g++-multilib 
   - nvm install 6
   - npm install
   - npm install electron-builder@next
