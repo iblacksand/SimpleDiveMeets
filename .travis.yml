@@ -6,7 +6,6 @@ language: c
 matrix:
   include:
     - os: osx
-    osx_image: xcode8.3
     - os: linux
       env: CC=clang CXX=clang++ npm_config_clang=1
       compiler: clang
