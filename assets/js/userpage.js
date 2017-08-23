@@ -26,9 +26,9 @@ readTextFile("./data/" + name + ".json", function(text){
 });
 
 function createDiv(dive){
-    var div = '<div class="content">' + 
-    '<input type="checkbox" id="' + dive + '">'+
-    '<label for="' + dive + '">' + dive + '</label>';
+    var div = '<div class="content container">' + 
+    '<input class="check" type="checkbox" id="' + dive + '" name="' + dive + '">'+
+    '<label for="' + dive + '">' + dive + '<div></div></label></div>';
     return div;
 }
 

@@ -1,9 +1,10 @@
 const Fuse = require('Fuse.js');
-const {app, BrowserWindow,win} = require('electron');
+const {app, BrowserWindow, win} = require('electron');
 var $ = require('jQuery');
 
 $('#searchbox').on('change', search);
-$('#searchbutton').on('click', search);
+$('#searchbutton'
+).on('click', search);
 
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
@@ -17,7 +18,7 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 var data;
-readTextFile("./DiveList.json", function(text){
+readTextFile("./data/DiveList.json", function(text){
     data = JSON.parse(text);
 });
 
@@ -60,8 +61,6 @@ $("#mytable tbody").remove();
         var td4="<td>"+result[i]["Board"]+"</td>";
         var td2="<td>"+result[i]["Dive Description"]+"</td>";
         var td3="<td>"+result[i]["DD"]+"</td></tr>";
-
-       $("#mytable").append(tr+td1+td4+td2+td3); 
-
+       $("#mytable").append(tr+td1+td4+td2+td3);
     }   
 }
