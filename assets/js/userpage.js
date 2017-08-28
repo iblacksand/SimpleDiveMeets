@@ -17,6 +17,7 @@ function readTextFile(file, callback) {
     };
     rawFile.send(null);
 }
+
 readTextFile("./data/" + name + ".json", function(text){
     data = JSON.parse(text)[0];
     console.log(data + " : " + data["dive1"]);
@@ -28,7 +29,7 @@ readTextFile("./data/" + name + ".json", function(text){
 function createDiv(dive){
     var div = '<div class="content container">' + 
     '<input class="check" type="checkbox" id="' + dive + '" name="' + dive + '">'+
-    '<label for="' + dive + '">' + dive + '<div></div></label></div>';
+    '<label for="' + dive + '">' + dive + '</label></div>';
     return div;
 }
 

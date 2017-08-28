@@ -20,12 +20,18 @@
     <div class="column"><a class="button" id="userbutton">User Example Page</a></div>
     <div class="column"><a class="button is-danger" id="closebutton">Exit</a>
     </div>
+    <div class="columns">
+      <div class="column">
+        <a class="button is-primary" id="scoreentry">Test Live Score Entry</a>
+      </div>
+    </div>
     </center>
     <script>
         const {app, BrowserWindow} = require('electron')
         const path = require('path')
         const url = require('url')
         var $ = require('jquery')
+        const dives = require('./assets/js/Dive');
         let win
         let userpg
 
@@ -35,6 +41,10 @@
 
         $('#userbutton').on('click', function(){
             userpg = window.open("./userpage.html?name=John");
+        })
+
+        $('#scoreentry').on('click', function(){
+            userpg = window.open("./LiveScoreEntry.html");
         })
 
         const remote = require('electron').remote;

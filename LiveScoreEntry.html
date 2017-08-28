@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="./node_modules/bulma/css/bulma.css">
         <link rel="stylesheet" type="text/css" href="./font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="./assets/css/checkbox.min.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/footers.css">
     </head>
 
     <body>
@@ -16,17 +16,26 @@
                     </a>
                 </div>
             </nav>
-            <div class="content" id="divelist">
+            <div class="content" id="Panel">
             </div>
         </center>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-left">
+                      <a class="button">Next Diver</a>
+                </div>
+            </div>
+        </footer>
+
     <script>
         var $ =require('jquery');
-         const remote = require('electron').remote;
+        const remote = require('electron').remote;
         $('#exit').on('click',function(){
             var window = remote.getCurrentWindow();
             window.close();
         });
     </script>
-    <script src="./assets/js/userpage.js"></script>
+    <script src="./assets/js/LiveScoreEntry.js"></script>
     </body>
 </html>
