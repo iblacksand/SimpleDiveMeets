@@ -1,11 +1,18 @@
+'use strict';
 class Dive{
     constructor(divedata){
-        this.dives = "hello";
+        this.dives = divedata["Dive Description"];
     }
+
+    /**
+     * Creates a 
+     * 
+     * @returns 
+     * @memberof Dive
+     */
     toString(){
         return this.dives;
     }
 }
 
-var d = new Dive("hello");
-console.log(d.toString());
+module.exports = Dive;
