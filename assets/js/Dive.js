@@ -1,8 +1,14 @@
 'use strict';
 class Dive{
     constructor(divedata){
-        this.dives = divedata["Dive Description"];
+        this.divedata = divedata;
     }
+
+    dd(){
+        return this.divedata["DD"];
+    }
+
+    
 
     /**
      * Creates a 
@@ -11,7 +17,7 @@ class Dive{
      * @memberof Dive
      */
     toString(){
-        return this.dives;
+        return this.divedata["Dive Description"];
     }
 }
 

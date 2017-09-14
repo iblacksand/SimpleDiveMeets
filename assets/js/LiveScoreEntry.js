@@ -24,7 +24,7 @@ function getParameterByName(name, url) {
 
 var divers;
 
-readTextFile("./data/" +   + ".json", function(text){
+readTextFile("./data/DiveList.json", function(text){
     diver = JSON.parse(text);
     console.log(divers)
     console.log(line);
