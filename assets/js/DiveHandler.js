@@ -1,28 +1,11 @@
-// 'use strict';
 const Dive = require('./Dive.js');
-
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}
-
-//usage:
-var list = [];
-// readTextFile("./data/DiveList.json", function(text){
-//     list = JSON.parse(text);;
-// });
 const JSONHandler = require('./JSONHandler.js');
+
+var list = [];
+
 
 JSONHandler.GetJSON("./data/DiveList.json").then((obj) =>{
     list = obj;
-    // console.log("OBJ \n" + list);
 });
 
 

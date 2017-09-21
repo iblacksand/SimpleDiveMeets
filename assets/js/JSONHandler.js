@@ -1,4 +1,5 @@
 /**
+ * A Method to get JSON files from a file.
  * @param file This is the file name of the JSON file
  * @return returns a promise with the object resolved
  */
