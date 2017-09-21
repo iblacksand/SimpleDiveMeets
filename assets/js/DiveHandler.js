@@ -15,13 +15,15 @@ function readTextFile(file, callback) {
 
 //usage:
 var list = [];
-readTextFile("./data/DiveList.json", function(text){
-    list = JSON.parse(text);;
-});
+// readTextFile("./data/DiveList.json", function(text){
+//     list = JSON.parse(text);;
+// });
+const JSONHandler = require('./JSONHandler.js');
 
-function getDiveList(){
-    return list;
-}
+JSONHandler.GetJSON("./data/DiveList.json").then((obj) =>{
+    list = obj;
+    // console.log("OBJ \n" + list);
+});
 
 
 exports.getDive = function (code, boardHeight){
@@ -34,4 +36,4 @@ exports.getDive = function (code, boardHeight){
     return new Dive({
         "Dive Description" : "ERROR"
     });
-};
+}; 

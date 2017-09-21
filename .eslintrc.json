@@ -7,7 +7,8 @@
     },
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "ecmaVersion": 2017
         },
         "sourceType": "module"
     },
@@ -22,4 +23,5 @@
         "semi": "error"
         
     }
+        
 }
