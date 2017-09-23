@@ -1,7 +1,6 @@
 const {app, BrowserWindow, globalShortcut, Menu} = require('electron');
 const path = require('path');
 const url = require('url');
-global.sharedObj.windowloaded = false;
 const template = [
   {
     label: "File",    

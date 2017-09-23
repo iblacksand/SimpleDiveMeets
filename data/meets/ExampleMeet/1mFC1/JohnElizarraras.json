@@ -3,13 +3,9 @@
     "dives": [
         "001A",
         "100D",
-        "101B",
-        "fd",
-        "fds",
-        "fasd"
+        "101B"
     ],
     "scores":[
-        [",,", "gdfgfs", "gdsaf", "fsafds", "sdafsda", "fsfasfa", "fsadsfas", "sdffa", "ffsdaasfdsaf", "fsafads"],
         ["6.5", "6", "7"],
         ["5.5", "6.5", "4"],
         ["3.5", "6", "3"]
