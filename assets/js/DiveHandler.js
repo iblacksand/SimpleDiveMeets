@@ -1,5 +1,4 @@
 const Dive = require('./Dive.js');
-const JSONHandler = require('./JSONHandler.js');
 
 var list = [];
 

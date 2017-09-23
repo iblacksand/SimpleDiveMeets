@@ -1,26 +1,112 @@
-const {app, BrowserWindow, globalShortcut, remote} = require('electron');
+const {app, BrowserWindow, globalShortcut, Menu} = require('electron');
 const path = require('path');
 const url = require('url');
+
+const template = [
+  {
+    label: "File",    
+    submenu:[
+      {
+        label: 'Print',
+        accelerator: 'CmdOrCtrl+P',
+        click() {
+          BrowserWindow.getFocusedWindow().webContents.print();
+        }
+      },
+      {role:'close'}
+    ]
+  },
+  {
+    label: 'Edit',
+    submenu: [
+      {role: 'undo'},
+      {role: 'redo'},
+      {type: 'separator'},
+      {role: 'cut'},
+      {role: 'copy'},
+      {role: 'paste'},
+      {role: 'pasteandmatchstyle'},
+      {role: 'delete'},
+      {role: 'selectall'}
+    ]
+  },
+  {
+    label: 'View',
+    submenu: [
+      {role: 'reload'},
+      {role: 'forcereload'},
+      {role: 'toggledevtools'},
+      {type: 'separator'},
+      {role: 'resetzoom'},
+      {role: 'zoomin'},
+      {role: 'zoomout'},
+      {type: 'separator'},
+      {role: 'togglefullscreen'}
+    ]
+  },
+  {
+    role: 'window',
+    submenu: [
+      {role: 'minimize'},
+      {role: 'close'}
+    ]
+  },
+  {
+    role: 'help',
+    submenu: [
+      {
+        label: 'Learn More',
+        click () { require('electron').shell.openExternal('https://iblacksand.github.io');}
+      }
+    ]
+  }
+];
+
+if (process.platform === 'darwin') {
+  template.unshift({
+    label: app.getName(),
+    submenu: [
+      {role: 'about'},
+      {type: 'separator'},
+      {role: 'services', submenu: []},
+      {type: 'separator'},
+      {role: 'hide'},
+      {role: 'hideothers'},
+      {role: 'unhide'},
+      {type: 'separator'},
+      {role: 'quit'}
+    ]
+  });
+
+  // Edit menu
+  template[1].submenu.push(
+    {type: 'separator'},
+    {
+      label: 'Speech',
+      submenu: [
+        {role: 'startspeaking'},
+        {role: 'stopspeaking'}
+      ]
+    }
+  );
+
+  // Window menu
+  template[3].submenu = [
+    {role: 'close'},
+    {role: 'minimize'},
+    {role: 'zoom'},
+    {type: 'separator'},
+    {role: 'front'}
+  ];
+}
+
+const menu = Menu.buildFromTemplate(template);
+Menu.setApplicationMenu(menu);
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
 
-app.on('ready', () => {
-  // Register a 'CommandOrControl+X' shortcut listener.
-  const ret = globalShortcut.register('CommandOrControl+p', () => {
-    // console.log('CommandOrControl+P is pressed');
-    let curwin = BrowserWindow.getFocusedWindow();
-    curwin.webContents.print();
-  });
-
-  if (!ret) {
-    console.log('registration failed');
-  }
-
-  // Check whether a shortcut is registered.
-  console.log(globalShortcut.isRegistered('CommandOrControl+P'));
-});
 
 app.on('will-quit', () => {
   // Unregister all shortcuts.
@@ -36,17 +122,6 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }));
-  const ret = globalShortcut.register('CommandOrControl+P', () => {
-    console.log('CommandOrControl+P is pressed');
-  });
-
-  if (!ret) {
-    console.log('registration failed');
-  }
-
-  // Check whether a shortcut is registered.
-  console.log(globalShortcut.isRegistered('CommandOrControl+p'));
-
   // Open the DevTools.
   // win.webContents.openDevTools()
 
