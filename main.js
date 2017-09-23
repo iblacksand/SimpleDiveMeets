@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, globalShortcut, remote} = require('electron');
 const path = require('path');
 const url = require('url');
 
@@ -6,6 +6,26 @@ const url = require('url');
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
 
+app.on('ready', () => {
+  // Register a 'CommandOrControl+X' shortcut listener.
+  const ret = globalShortcut.register('CommandOrControl+p', () => {
+    // console.log('CommandOrControl+P is pressed');
+    let curwin = BrowserWindow.getFocusedWindow();
+    curwin.webContents.print();
+  });
+
+  if (!ret) {
+    console.log('registration failed');
+  }
+
+  // Check whether a shortcut is registered.
+  console.log(globalShortcut.isRegistered('CommandOrControl+P'));
+});
+
+app.on('will-quit', () => {
+  // Unregister all shortcuts.
+  globalShortcut.unregisterAll();
+});
 function createWindow () {
   // Create the browser window.
   win = new BrowserWindow({width: 800, height: 600});
@@ -16,6 +36,16 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }));
+  const ret = globalShortcut.register('CommandOrControl+P', () => {
+    console.log('CommandOrControl+P is pressed');
+  });
+
+  if (!ret) {
+    console.log('registration failed');
+  }
+
+  // Check whether a shortcut is registered.
+  console.log(globalShortcut.isRegistered('CommandOrControl+p'));
 
   // Open the DevTools.
   // win.webContents.openDevTools()

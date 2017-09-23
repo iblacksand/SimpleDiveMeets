@@ -6,6 +6,9 @@
     <link rel="stylesheet" type="text/css" href="./node_modules/bulma/css/bulma.css">
   </head>
   <body>
+
+   <div class="container is-fluid"> 
+
     <div class="content">
         <h1 class="title is-1">
             <center>Simple Dive Meets</center> 
@@ -18,13 +21,20 @@
     <div class="columns">
     <div class="column"><a class="button is-primary" id="startsearch">Search For A Dive</a></div>
     <div class="column"><a class="button" id="userbutton">User Example Page</a></div>
-    <div class="column"><a class="button is-danger" id="closebutton">Exit</a>
-    </div>
-    <div class="columns">
-      <div class="column">
-        <a class="button is-primary" id="scoreentry">Test Live Score Entry</a>
-      </div>
-    </div>
+    <div class="column"><a class="button is-danger" id="closebutton">Exit</a></div>
+    
+    </center>
+
+    <center>
+            <div class="columns">
+                    <div class="column">
+                      <a class="button is-primary" id="scoreentry">Test Live Score Entry</a>
+                    </div>
+                    <div class="column">
+                        <a class="button" id="divesheettest">Test Dive Sheets</a>
+                    </div>
+                  </div>
+           </div>
     </center>
     <script>
         const {app, BrowserWindow} = require('electron')
@@ -52,6 +62,10 @@
             var window = remote.getCurrentWindow();
             window.close();
         });
+
+        $('#divesheettest').on('click',() =>{
+            let newwin = window.open('./DiverSheet.html?meet=ExampleMeet&event=1MFC1&first=John&last=Elizarraras');
+        })
     </script>
   </body>
 </html>
