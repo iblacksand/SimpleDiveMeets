@@ -5,7 +5,7 @@ var list = [];
 
 JSONHandler.GetJSON("./data/DiveList.json").then((obj) =>{
     list = obj;
-    document.getElementById("loadingmodal").className= "modal";
+    
 });
 
 

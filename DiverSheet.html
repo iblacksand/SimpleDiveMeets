@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-            <link rel="stylesheet" type="text/css" href="./node_modules/bulma/css/bulma.css">
-            <link rel="stylesheet" type="text/css" href="./font-awesome.min.css">
-            <link rel="stylesheet" type="text/css" href="./assets/css/DiveSheetTables.css">
-    </head>
-    <body>
-        <center>
-            <h1 class="title" id="title">Diver Name</h1>
-        </center>
 
+<head>
+    <link rel="stylesheet" type="text/css" href="./node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="./font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/DiveSheetTables.css">
+</head>
+
+<body>
+
+    <div class="modal is-active" id="loadingmodal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <center><a class="button is-loading">loading</a></center>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <center>
+        <h1 class="title" id="title">Diver Name</h1>
+    </center>
+
+    <div class="container is-fluid">
         <center>
-                    <table id="divetable">
-                    </table>
+            <table id="divetable">
+            </table>
         </center>
-        <script src="./assets/js/DiverSheet.js"></script>
-    </body>
+    </div>
+    <script src="./assets/js/DiverSheet.js"></script>
+</body>
+
 </html>

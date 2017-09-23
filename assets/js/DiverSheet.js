@@ -17,6 +17,16 @@ JSONHandler.GetJSON(jsonpath).then((obj) =>{
     console.table(obj);
     console.log(obj);
     var diverdata = obj;
+    let tablehead = "<tr><th><span><input type=\"text\" value=\"dive\"/></span></th><th>Dive Description</th>";
+    for(let i = 0; i < diverdata["scores"][0].length; i++){
+        tablehead += "<th>" + (i + 1) + "</th>";
+    }
+    tablehead += "</tr>";
+
+    for(let i = 0; i < diverdata[""];i++);
+
+    $("#divetable").html(tablehead);
+    $("#loadingmodal").attr("class", "modal");
 });
 
 

@@ -5,9 +5,29 @@ table {
     empty-cells: show;
     margin-left: auto;
     margin-right: auto;
+    /* display:flex; */
+    flex-direction:row;
 }
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;color: #363636;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+  
 
 th, td {
     border: 4px solid black;
+    /* flex:1; */
     border-width: 4px;
 }
