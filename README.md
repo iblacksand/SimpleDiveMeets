@@ -15,6 +15,7 @@ This is going to be a tool to run basic dive meets, where a very complex program
 - [ ] Import google forms results for sign-ups
 - [ ] Sequential Dive Meet Runner
 - [ ] Sheet Editor
+    - [x] Very basic editor
 - [ ] Announcer Script Maker
 - [ ] Dive Sheet Maker
 
