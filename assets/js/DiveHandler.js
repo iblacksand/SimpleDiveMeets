@@ -8,9 +8,10 @@ JSONHandler.GetJSON("./data/DiveList.json").then((obj) =>{
 });
 
 
-exports.getDive = function (code, boardHeight){
+exports.getDive = diveFetch;
+function diveFetch(code, boardHeight){
     if(!comp){
-        setTimeout(getDive(code, boardHeight), 0);
+        setTimeout(diveFetch(code, boardHeight), 50);
     }
     for(let i = 0; i < list.length; i++){
         if(list[i]["Dive Code"] === code.toUpperCase() && list[i]["Board"] === boardHeight.toUpperCase()){
