@@ -33,6 +33,9 @@
                     <div class="column">
                         <a class="button" id="divesheettest">Test Dive Sheets</a>
                     </div>
+                    <div class="column">
+                        <a class="button" id="diverselect">Test Diver Selection</a>
+                    </div>
                   </div>
            </div>
     </center>
@@ -65,6 +68,9 @@
 
         $('#divesheettest').on('click',() =>{
             let newwin = window.open('./DiverSheet.html?meet=ExampleMeet&event=1MFC1&first=John&last=Elizarraras&board=1M');
+        });
+        $('#diverselect').on('click',() =>{
+            let newwin = window.open('./DiverSelection.html?meet=ExampleMeet');
         })
     </script>
   </body>
