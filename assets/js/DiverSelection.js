@@ -5,6 +5,18 @@ var eventlist;
 
 console.log('startingto get json');
 
+$('#eventlist').on('change', () => {
+    $('#diverSelectDiv').html("");
+    JSONHandler.GetJSON("./data/meets/" + Toolbox.getParam("meet") + "/" + eventlist[$("#eventlist")[0].selectedIndex][0] +"/DiverList.json").then((obj) => {
+        let innerhtml = "<div class='select'><select>";
+        for(let i = 0; i < obj.length; i++){
+            innerhtml += "<option>" + obj[i] + "</option>";   
+        }
+        innerhtml += "</select></div>";
+        $("#diverSelectDiv").html(innerhtml);
+    });
+});
+
 JSONHandler.GetJSON("./data/meets/" + Toolbox.getParam("meet") + "/EventList.json").then((obj) => {
     eventlist = obj;
     console.log('creating select');
