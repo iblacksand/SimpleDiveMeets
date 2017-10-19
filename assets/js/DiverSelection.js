@@ -5,12 +5,12 @@ var eventlist;
 
 console.log('startingto get json');
 
-$('#eventlist').on('change', () => {
+$('#eventselectbutton').on('click', () => {
     $('#diverSelectDiv').html("");
     JSONHandler.GetJSON("./data/meets/" + Toolbox.getParam("meet") + "/" + eventlist[$("#eventlist")[0].selectedIndex][0] +"/DiverList.json").then((obj) => {
-        let innerhtml = "<center><div class=\"select is-multiple\"><select multiple size=\"" + obj.length + "\">";
+        let innerhtml = "<center><div style=\"width:90%;\" class=\"select is-multiple\"><select style=\"width:90%;\" multiple size=\"" + obj.length + "\">";
         for(let i = 0; i < obj.length; i++){
-            innerhtml += "<option value=\"" + obj[i] + "\"P>" + obj[i] + "</option>";   
+            innerhtml += "<option value=\"" + obj[i] + "\">" + obj[i] + "</option>";   
         }
         innerhtml += "</select></div></center>";
         $("#diverSelectDiv").html(innerhtml);
