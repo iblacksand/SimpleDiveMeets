@@ -3,7 +3,7 @@ const JSONHandler = require('./assets/js/JSONHandler.js');
 const Toolbox = require('./assets/js/Toolbox.js');
 var eventlist;
 
-console.log('startingto get json');
+console.log('starting to get json');
 
 $('#eventselectbutton').on('click', () => {
     $('#diverSelectDiv').html("");
