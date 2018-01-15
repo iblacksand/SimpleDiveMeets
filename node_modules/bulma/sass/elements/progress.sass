@@ -1,6 +1,3 @@
-$progress-bar-background-color: $border !default
-$progress-value-background-color: $text !default
-
 .progress
   +block
   -moz-appearance: none
@@ -13,11 +10,11 @@ $progress-value-background-color: $text !default
   padding: 0
   width: 100%
   &::-webkit-progress-bar
-    background-color: $progress-bar-background-color
+    background-color: $border
   &::-webkit-progress-value
-    background-color: $progress-value-background-color
+    background-color: $text
   &::-moz-progress-bar
-    background-color: $progress-value-background-color
+    background-color: $text
   // Colors
   @each $name, $pair in $colors
     $color: nth($pair, 1)
