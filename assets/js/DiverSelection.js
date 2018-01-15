@@ -1,4 +1,4 @@
-const $ = require('jQuery');
+const $ = require('jquery');
 const JSONHandler = require('./assets/js/JSONHandler.js');
 const Toolbox = require('./assets/js/Toolbox.js');
 var eventlist;

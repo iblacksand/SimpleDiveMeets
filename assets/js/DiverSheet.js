@@ -1,4 +1,4 @@
-const $ = require('jQuery');
+const $ = require('jquery');
 const JSONHandler = require('./assets/js/JSONHandler.js');
 const DiveHandler = require('./assets/js/DiveHandler.js');
 

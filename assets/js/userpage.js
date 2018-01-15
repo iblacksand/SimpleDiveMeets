@@ -1,4 +1,4 @@
-var $ = require('jQuery');
+var $ = require('jquery');
 const {app, BrowserWindow,win} = require('electron');
 const Fuse = require('fuse.js');
 

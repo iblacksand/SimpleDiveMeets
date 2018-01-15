@@ -1,6 +1,6 @@
 const Fuse = require('Fuse.js');
 const {app, BrowserWindow,win} = require('electron');
-var $ = require('jQuery');
+var $ = require('jquery');
 
 $('#searchbox').on('change', search);
 

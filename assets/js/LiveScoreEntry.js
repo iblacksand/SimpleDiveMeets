@@ -1,4 +1,4 @@
-var $ = require('jQuery');
+var $ = require('jquery');
 
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
