@@ -12,8 +12,12 @@ install:
 
 build_script:
   - node_modules/.bin/electron-builder build
-
-test: off
+build: off
+version: '{build}'
+shallow_clone: true
+clone_depth: 1
+test_script:
+  - npm run dist
 
 environment:
   GH_TOKEN:

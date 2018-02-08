@@ -2,6 +2,8 @@
   "name": "simpledivemeets",
   "description": "A tool to run simple dive meets",
   "author": "John Elizarraras",
+  "email": "chess4j@gmail.com",
+  "url": "https://github.com/iblacksand/SimpleDiveMeets",
   "version": "0.0.1",
   "main": "main.js",
   "scripts": {
@@ -20,10 +22,50 @@
     "electron": "^1.8.1",
     "electron-builder": "^19.39.0"
   },
+  "dist": "npm run build && build --publish onTagOrDraft",
   "build": {
-    "appId": "simple.dive.meets",
-    "mac": {
-      "category": "dive.meets"
+    "appId": "org.simple.divemeets",
+    "category": "public.app-category.sports",
+    "files": [
+      "dist/",
+      "node_modules/",
+      "data/",
+      "assets/",
+      "DiverSelection.html",
+      "DiverSheet.html",
+      "diversearch.html",
+      "LiveScoreEntry.html",
+      "userpage.html",
+      "usersearch.html",
+      "main.js",
+      "index.html",
+      "package.json"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
     }
+  },
+  "directories": {
+    "output": "release"
   }
 }
