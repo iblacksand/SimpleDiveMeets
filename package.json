@@ -63,9 +63,10 @@
         "AppImage",
         "deb"
       ]
-    }
-  },
+    },
+
   "directories": {
     "output": "release"
+  }
   }
 }
