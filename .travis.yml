@@ -44,3 +44,11 @@ before_script:
 
 script:
   - npm run dist
+
+deploy:
+  provider: releases
+  api_key: "c181ecfd0f2cc4ad9f317309099ac5426256d34a"
+  file: "release/*"
+  skip_cleanup: true
+  on:
+    tags: true
