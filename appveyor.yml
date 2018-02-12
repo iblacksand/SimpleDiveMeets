@@ -12,7 +12,7 @@ install:
 
 build_script:
   - node_modules/.bin/electron-builder build
-build: off
+build: true
 version: '{build}'
 shallow_clone: true
 clone_depth: 1
