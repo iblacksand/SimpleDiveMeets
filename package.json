@@ -25,7 +25,6 @@
   "dist": "npm run build && build --publish onTagOrDraft",
   "build": {
     "appId": "org.simple.divemeets",
-    "category": "public.app-category.sports",
     "files": [
       "dist/",
       "node_modules/",
