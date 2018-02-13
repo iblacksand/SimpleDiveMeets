@@ -12,7 +12,7 @@
     "dist": "electron-builder ",
     "build": "electron-builder ",
     "buildlinux": "electron-builder -l",
-    "postinstall": "install-app-deps",
+    "postinstall": "install-app-deps"
   },
   "dependencies": {
     "bulma": "^0.4.2",
