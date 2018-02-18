@@ -4,8 +4,7 @@
  * @return returns a promise with the object resolved
  */
 module.exports.GetJSON = (file) => {
-    return new Promise(resolve =>{
-        var obj;
+    return new Promise(resolve =>{ var obj;
         readTextFile(file).then((text) =>{
             obj = JSON.parse(text);
             resolve(obj);
