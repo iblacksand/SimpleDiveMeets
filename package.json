@@ -20,7 +20,7 @@
     "jquery": "^3.2.1"
   },
   "devDependencies": {
-    "electron": "^1.8.1",
+    "electron": "^1.8.2",
     "electron-builder": "^19.39.0"
   },
   "dist": "npm run build && build --publish onTagOrDraft",
@@ -64,9 +64,8 @@
         "deb"
       ]
     },
-
-  "directories": {
-    "output": "release"
-  }
+    "directories": {
+      "output": "release"
+    }
   }
 }
