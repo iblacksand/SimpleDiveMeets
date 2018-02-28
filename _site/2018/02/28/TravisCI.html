@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>CI Configuration | Simple Dive Meets</title>
+	<meta name="description" content="TravisCIGetting Travis to build was a challenge, since Electron requires a screen to build.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/SimpleDiveMeets/assets/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/SimpleDiveMeets/" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="/SimpleDiveMeets/2018/02/28/TravisCI.html">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="Simple Dive Meets" href="/SimpleDiveMeets/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+	
+
+	<!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="branding">
+		
+		<h1 class="site-title">
+			<a href="/SimpleDiveMeets/">Simple Dive Meets</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			
+			
+			
+			
+			<li>
+				<a class="page-link" href="/SimpleDiveMeets/about/">
+					About
+				</a>
+			</li>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<li>
+				<a class="page-link" href="/SimpleDiveMeets/tags.html">
+					tags
+				</a>
+			</li>
+			
+			
+			<!-- Social icons from Font Awesome, if enabled  -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://github.com/iblacksand/simpledivemeets" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://twitter.com/twitter" title="Follow on Twitter">
+		<i class="fa fa-fw fa-twitter"></i>
+	</a>
+</li>
+
+
+
+
+
+
+            
+            <!-- Search bar -->
+            
+		</ul>
+	</nav>
+    
+</header>
+
+    <div class="content">
+      <article >
+  <header style="background-image: url('/SimpleDiveMeets/')">
+    <h1 class="title">CI Configuration</h1>
+    
+    <p class="meta">
+      February 28, 2018
+      
+    </p>
+  </header>
+  <section class="post-content"><h2 id="travisci">TravisCI</h2>
+<p>Getting Travis to build was a challenge, since Electron requires a screen to build.</p>
+
+<p>As of now, I have this as my travis config</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">sudo</span><span class="pi">:</span> <span class="s">required</span>
+<span class="na">dist</span><span class="pi">:</span> <span class="s">trusty</span>
+<span class="na">language</span><span class="pi">:</span> <span class="s">c</span>
+
+<span class="na">matrix</span><span class="pi">:</span>
+  <span class="na">include</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">os </span><span class="pi">:</span> <span class="s">osx</span>
+    <span class="pi">-</span> <span class="na">os</span><span class="pi">:</span> <span class="s">linux</span>
+      <span class="na">env</span><span class="pi">:</span> <span class="s">CC=clang CXX=clang++ npm_config_clang=1</span>
+<span class="na">Y       compiler</span><span class="pi">:</span> <span class="s">clang</span>
+
+<span class="na">node_js</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">6</span>
+
+<span class="na">cache</span><span class="pi">:</span>
+  <span class="na">directories</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">node_modules</span>
+
+<span class="na">addons</span><span class="pi">:</span>
+  <span class="na">apt</span><span class="pi">:</span>
+    <span class="na">sources</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">ubuntu-toolchain-r-test</span>
+    <span class="na">packages</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">g++-4.8</span>
+      <span class="pi">-</span> <span class="s">icnsutils</span>
+      <span class="pi">-</span> <span class="s">graphicsmagick</span>
+      <span class="pi">-</span> <span class="s">libgnome-keyring-dev</span>
+      <span class="pi">-</span> <span class="s">xz-utils</span>
+      <span class="pi">-</span> <span class="s">xorriso</span>
+      <span class="pi">-</span> <span class="s">xvfb</span>
+
+<span class="na">install</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">nvm install 6</span>
+  <span class="pi">-</span> <span class="s">npm install electron -g</span>
+  <span class="pi">-</span> <span class="s">npm install electron-builder -g</span>
+  <span class="pi">-</span> <span class="s">npm install</span>
+  <span class="pi">-</span> <span class="s">export DISPLAY=':99.0'</span>
+  <span class="pi">-</span> <span class="s">Xvfb :99 -screen 0 1024x768x24 &gt; /dev/null 2&gt;&amp;1 &amp;</span>
+
+<span class="na">before_script</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">export DISPLAY=:99.0</span>
+  <span class="pi">-</span> <span class="s">sh -e /etc/init.d/xvfb start &amp;</span>
+  <span class="pi">-</span> <span class="s">sleep 3</span>
+
+<span class="na">script</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">npm run dist</span></code></pre></figure>
+
+<p>It builds it using <a href="https://www.electron.build/">Electron Builder</a>.</p>
+
+<h2 id="appveyor">AppVeyor</h2>
+
+<p>My configuration for AppVeyor is</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">platform</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">x64</span>
+
+<span class="na">cache</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">node_modules</span>
+  <span class="pi">-</span> <span class="s1">'</span><span class="s">%APPDATA%\npm-cache'</span>
+  <span class="pi">-</span> <span class="s1">'</span><span class="s">%USERPROFILE%\.electron'</span>
+
+<span class="na">install</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">ps</span><span class="pi">:</span> <span class="s">Install-Product node 7 x64</span>
+  <span class="pi">-</span> <span class="s">npm install</span>
+
+<span class="na">build_script</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">node_modules/.bin/electron-builder build</span>
+<span class="na">build</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{build}'</span>
+<span class="na">shallow_clone</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">clone_depth</span><span class="pi">:</span> <span class="s">1</span>
+<span class="na">test_script</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">npm run dist</span>
+
+<span class="na">environment</span><span class="pi">:</span>
+  <span class="na">GH_TOKEN</span><span class="pi">:</span>
+    <span class="na">secure</span><span class="pi">:</span> <span class="s">token_here</span></code></pre></figure>
+
+<p>It builds the same as TravisCI, but you don’t have to install the screen.</p>
+</section>
+  
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+
+    </div>
+    
+<script src="/SimpleDiveMeets/assets/js/katex_init.js"></script>
+
+
+
+<footer class="site-footer">
+	<p class="text"></p>
+</footer>
+
+
+  </body>
+</html>
