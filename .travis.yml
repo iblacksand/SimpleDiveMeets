@@ -44,8 +44,3 @@ before_script:
 
 script:
   - npm run dist
-
-deploy:
-  provider: releases
-  file: "release/*"
-  skip_cleanup: true

@@ -22,15 +22,3 @@ test_script:
 environment:
   GH_TOKEN:
     secure: H2b1mq+K/miUzkxP1jtaiNwonVsUPMDxqtQknijwNFCmIFjz0DFF7ktgXZ8nzA81
-
-deploy:
-  release: SimpleDiveMeets-v$(appveyor_build_version)
-  description: ''
-  provider: GitHub
-  auth_token:
-    secure: H2b1mq+K/miUzkxP1jtaiNwonVsUPMDxqtQknijwNFCmIFjz0DFF7ktgXZ8nzA81 # your encrypted token from GitHub
-  artifact: /release/*          # upload all NuGet packages to release assets
-  draft: true
-  prerelease: true
-  on:
-    branch: master                 # release from master branch only
