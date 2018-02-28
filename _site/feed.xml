@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simple Dive Meets</title>
+    <atom:link href="/SimpleDiveMeets/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>http://localhost:4000/SimpleDiveMeets/</link>
+    <description>Development blog for SimpleDiveMeets</description>
+    <pubDate>Wed, 28 Feb 2018 10:18:20 -0700</pubDate>
+    
+      <item>
+        <title>First Post</title>
+        <link>/SimpleDiveMeets/2018/02/28/FirstPost.html</link>
+        <guid isPermaLink="true">/SimpleDiveMeets/2018/02/28/FirstPost.html</guid>
+        <description>&lt;p&gt;This is going to be a blog to track the development of &lt;a href=&quot;https://github.com/iblacksand/SimpleDiveMeets&quot;&gt;SimpleDiveMeets&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I plan to add information about how things are being done.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 28 Feb 2018 00:00:00 -0700</pubDate>
+      </item>
+    
+  </channel>
+</rss>
