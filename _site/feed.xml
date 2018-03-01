@@ -5,7 +5,7 @@
     <atom:link href="/SimpleDiveMeets/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/SimpleDiveMeets/</link>
     <description>Development blog for SimpleDiveMeets</description>
-    <pubDate>Wed, 28 Feb 2018 10:39:19 -0700</pubDate>
+    <pubDate>Wed, 28 Feb 2018 17:46:04 -0700</pubDate>
     
       <item>
         <title>CI Configuration</title>
@@ -25,7 +25,7 @@
     &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;os &lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;osx&lt;/span&gt;
     &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;linux&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;CC=clang CXX=clang++ npm_config_clang=1&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;Y       compiler&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;clang&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;compiler&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;clang&lt;/span&gt;
 
 &lt;span class=&quot;na&quot;&gt;node_js&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;6&lt;/span&gt;

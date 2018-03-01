@@ -19,7 +19,7 @@ matrix:
     - os : osx
     - os: linux
       env: CC=clang CXX=clang++ npm_config_clang=1
-Y       compiler: clang
+      compiler: clang
 
 node_js:
   - 6

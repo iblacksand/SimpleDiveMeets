@@ -117,12 +117,6 @@
 
 
 
-<li>
-	<a href="https://twitter.com/twitter" title="Follow on Twitter">
-		<i class="fa fa-fw fa-twitter"></i>
-	</a>
-</li>
-
 
 
 
@@ -159,7 +153,7 @@
         "date": "February 28, 2018",
         "author": "",
         "category": "",
-        "content": "TravisCIGetting Travis to build was a challenge, since Electron requires a screen to build.As of now, I have this as my travis configsudo: requireddist: trustylanguage: cmatrix:  include:    - os : osx    - os: linux      env: CC=clang CXX=clang++ npm_config_clang=1Y       compiler: clangnode_js:  - 6cache:  directories:    - node_modulesaddons:  apt:    sources:      - ubuntu-toolchain-r-test    packages:      - g++-4.8      - icnsutils      - graphicsmagick      - libgnome-keyring-dev      - xz-utils      - xorriso      - xvfbinstall:  - nvm install 6  - npm install electron -g  - npm install electron-builder -g  - npm install  - export DISPLAY=':99.0'  - Xvfb :99 -screen 0 1024x768x24 &gt; /dev/null 2&gt;&amp;1 &amp;before_script:  - export DISPLAY=:99.0  - sh -e /etc/init.d/xvfb start &amp;  - sleep 3script:  - npm run distIt builds it using Electron Builder.AppVeyorMy configuration for AppVeyor isplatform:  - x64cache:  - node_modules  - '%APPDATA%\\npm-cache'  - '%USERPROFILE%\\.electron'install:  - ps: Install-Product node 7 x64  - npm installbuild_script:  - node_modules/.bin/electron-builder buildbuild: trueversion: '{build}'shallow_clone: trueclone_depth: 1test_script:  - npm run distenvironment:  GH_TOKEN:    secure: token_hereIt builds the same as TravisCI, but you don’t have to install the screen.",
+        "content": "TravisCIGetting Travis to build was a challenge, since Electron requires a screen to build.As of now, I have this as my travis configsudo: requireddist: trustylanguage: cmatrix:  include:    - os : osx    - os: linux      env: CC=clang CXX=clang++ npm_config_clang=1      compiler: clangnode_js:  - 6cache:  directories:    - node_modulesaddons:  apt:    sources:      - ubuntu-toolchain-r-test    packages:      - g++-4.8      - icnsutils      - graphicsmagick      - libgnome-keyring-dev      - xz-utils      - xorriso      - xvfbinstall:  - nvm install 6  - npm install electron -g  - npm install electron-builder -g  - npm install  - export DISPLAY=':99.0'  - Xvfb :99 -screen 0 1024x768x24 &gt; /dev/null 2&gt;&amp;1 &amp;before_script:  - export DISPLAY=:99.0  - sh -e /etc/init.d/xvfb start &amp;  - sleep 3script:  - npm run distIt builds it using Electron Builder.AppVeyorMy configuration for AppVeyor isplatform:  - x64cache:  - node_modules  - '%APPDATA%\\npm-cache'  - '%USERPROFILE%\\.electron'install:  - ps: Install-Product node 7 x64  - npm installbuild_script:  - node_modules/.bin/electron-builder buildbuild: trueversion: '{build}'shallow_clone: trueclone_depth: 1test_script:  - npm run distenvironment:  GH_TOKEN:    secure: token_hereIt builds the same as TravisCI, but you don’t have to install the screen.",
         "url": "/SimpleDiveMeets//2018/02/28/TravisCI.html"
       }
       ,
