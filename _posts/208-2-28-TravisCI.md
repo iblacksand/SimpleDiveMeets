@@ -2,6 +2,7 @@
 layout: post
 title: CI Configuration
 date: Wed Feb 28 10:29:05 MST 2018
+tags: travisci   appveyor
 ---
 
 ## TravisCI

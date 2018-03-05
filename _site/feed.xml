@@ -5,7 +5,38 @@
     <atom:link href="/SimpleDiveMeets/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/SimpleDiveMeets/</link>
     <description>Development blog for SimpleDiveMeets</description>
-    <pubDate>Wed, 28 Feb 2018 17:46:04 -0700</pubDate>
+    <pubDate>Mon, 05 Mar 2018 09:48:09 -0700</pubDate>
+    
+      <item>
+        <title>Development Plans</title>
+        <link>/SimpleDiveMeets/2018/03/01/DevelopmentPlans.html</link>
+        <guid isPermaLink="true">/SimpleDiveMeets/2018/03/01/DevelopmentPlans.html</guid>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#google-form-sign-ups&quot; id=&quot;markdown-toc-google-form-sign-ups&quot;&gt;Google Form Sign-ups&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#live-sign-ups&quot; id=&quot;markdown-toc-live-sign-ups&quot;&gt;Live Sign-ups&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#report-maker&quot; id=&quot;markdown-toc-report-maker&quot;&gt;Report Maker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are features that I plan on implementing in SimpleDiveMeets&lt;/p&gt;
+
+&lt;h3 id=&quot;google-form-sign-ups&quot;&gt;Google Form Sign-ups&lt;/h3&gt;
+
+&lt;p&gt;This would allow for divers to sign up for meets online. It would have to follow a template.&lt;/p&gt;
+
+&lt;p&gt;There would be some restrictions, such as a strict number of dives.&lt;/p&gt;
+
+&lt;h3 id=&quot;live-sign-ups&quot;&gt;Live Sign-ups&lt;/h3&gt;
+
+&lt;p&gt;Planning on making some form of live updating dive changes. For instance, if a diver needs to change their dives, they can change it on their phone instantly. The diver can still ask the dive meet manager, but they can handle it themselves. It should allow for less chaos before a meet starts.&lt;/p&gt;
+
+&lt;p&gt;I plan to host it on &lt;a href=&quot;https://www.heroku.com/&quot;&gt;Heroku&lt;/a&gt; with &lt;a href=&quot;https://socket.io/&quot;&gt;Socket.io&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;report-maker&quot;&gt;Report Maker&lt;/h3&gt;
+
+&lt;p&gt;I plan on making a report maker. It would generate reports for the announcer, check in sheets, and a verification of dives. I have made a similar program called SheetMaker that used LaTeX, but it would require a lot of user installations. It will use the default Chromium print dialog.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Mar 2018 09:53:52 -0700</pubDate>
+      </item>
     
       <item>
         <title>CI Configuration</title>
