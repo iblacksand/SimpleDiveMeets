@@ -5,7 +5,20 @@
     <atom:link href="/SimpleDiveMeets/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/SimpleDiveMeets/</link>
     <description>Development blog for SimpleDiveMeets</description>
-    <pubDate>Mon, 05 Mar 2018 10:07:51 -0700</pubDate>
+    <pubDate>Wed, 07 Mar 2018 10:39:48 -0700</pubDate>
+    
+      <item>
+        <title>Codacy</title>
+        <link>/SimpleDiveMeets/2018/03/07/Codacy.html</link>
+        <guid isPermaLink="true">/SimpleDiveMeets/2018/03/07/Codacy.html</guid>
+        <description>&lt;p&gt;I implemented &lt;a href=&quot;https://www.codacy.com/&quot;&gt;codacy&lt;/a&gt; so I have automatic code checking.&lt;/p&gt;
+
+&lt;p&gt;It is a step forward that will help so that my code won’t break anything made in the past.&lt;/p&gt;
+
+&lt;p&gt;I now have TravisCI, AppVeyor and Codacy automatically running after each push. The next step would be coverage, but the project is not at a stage where that would be necessary.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 07 Mar 2018 10:37:13 -0700</pubDate>
+      </item>
     
       <item>
         <title>Development Plans</title>
