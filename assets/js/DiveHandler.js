@@ -1,7 +1,7 @@
 const Dive = require('./Dive.js');
 var list = [];
 var comp = false;
-const JSONHandler = require('./JSONHandler.js')
+const JSONHandler = require('./JSONHandler.js');
 JSONHandler.GetJSON("./data/DiveList.json").then((obj) => {
     list = obj;
     comp = true;

@@ -1,6 +1,5 @@
 var $ = require('jquery');
 const {app, BrowserWindow,win} = require('electron');
-const Fuse = require('fuse.js');
 
 var parameters = location.search.substring(1).split("&");
 var name = unescape(parameters[0].split("=")[1]).toLowerCase();
@@ -19,7 +18,7 @@ function readTextFile(file, callback) {
 }
 
 readTextFile("./data/" + name + ".json", function(text){
-    data = JSON.parse(text)[0];
+    let data = JSON.parse(text)[0];
     console.log(data + " : " + data["dive1"]);
     var line = createDiv(data["dive1"]) + createDiv(data["dive2"]) + createDiv(data["dive3"]) + createDiv(data["dive4"]);
     console.log(line);
