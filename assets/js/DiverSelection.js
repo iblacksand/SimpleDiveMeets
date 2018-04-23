@@ -24,6 +24,9 @@ JSONHandler.GetJSON("./data/meets/" + Toolbox.getParam("meet") + "/EventList.jso
 });
 
 
+/**
+ * Creates the event list in DiverSelection.html
+ */
 function createEventSelect() {
     let innerhtml = "";
     for (let i = 0; i < eventlist.length; i++) {

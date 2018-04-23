@@ -4,6 +4,12 @@ var $ = require('jquery');
 
 $('#searchbox').on('change', search);
 
+/**
+ * gets the value of a parameter
+ * @param {string} name the name of the parameter
+ * @param {string} url the url of the window
+ * @returns {string} the value of the parameter
+ */
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
@@ -33,12 +39,20 @@ var options = {
 ]
 };
 
+/**
+ * stringifies an array
+ * @param {Array} ary the array to stringify
+ * @return {string} a string representation of the array 
+ */
 function stringify(ary){
     var s = "";
     for(var i = 0, len = ary.length; i < len; i++) s = s + JSON.stringify(ary[i]) + '\n';
     return s;
 }
 
+/**
+ * Searches for the dive entered in the textbox using fuzzy search
+ */
 function search(){
   var fuse = new Fuse(data, options); // "list" is the item array
 //   console.log(document.getElementById('searchbox').value);

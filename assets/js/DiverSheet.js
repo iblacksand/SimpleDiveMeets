@@ -2,6 +2,12 @@ const $ = require('jquery');
 const JSONHandler = require('./assets/js/JSONHandler.js');
 const DiveHandler = require('./assets/js/DiveHandler.js');
 
+/**
+ * gets the value of a parameter
+ * @param {string} name the name of the parameter
+ * @param {string} url the url of the window
+ * @returns {string} the value of the parameter
+ */
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");

@@ -1,5 +1,9 @@
 var $ = require('jquery');
 var totalevents = 1;
+
+/**
+ * This creates a new event box that appears on CreateMeet.html
+ */
 function addNewEvent(){
     let last = $('#last-eventdiv');
     last.removeAttr('id');
@@ -8,12 +12,20 @@ function addNewEvent(){
     totalevents++;
 }
 
+/**
+ * Removes the event box at the index provided
+ * @param {int} index 
+ */
 function deleteEvent(index){
     let toDelete = $("div[position='" + index +"']");
     if(toDelete.attr("id") == "last-eventdiv") changeLast(index);
     toDelete.remove();
 }
 
+/**
+ * Makes the event box right before the index hav the id of 'last-evendiv'
+ * @param {int} index 
+ */
 function changeLast(index){
     index--;
     if($("div[position='" + index +"']").length){

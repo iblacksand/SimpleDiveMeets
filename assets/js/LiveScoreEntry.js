@@ -1,5 +1,11 @@
 var $ = require('jquery');
 
+/**
+ * Reads a text file and retuns a string
+ * @param {string} file path of the file
+ * @param {function} callback callback function
+ * @return {string} the file contents
+ */
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
@@ -12,6 +18,13 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
+
+/**
+ * gets the value of a parameter
+ * @param {string} name the name of the parameter
+ * @param {string} url the url of the window
+ * @returns {string} the value of the parameter
+ */
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");

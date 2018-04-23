@@ -2,6 +2,7 @@ const Dive = require('./Dive.js');
 var list = [];
 var comp = false;
 const JSONHandler = require('./JSONHandler.js');
+
 JSONHandler.GetJSON("./data/DiveList.json").then((obj) => {
     list = obj;
     comp = true;
@@ -11,6 +12,12 @@ JSONHandler.GetJSON("./data/DiveList.json").then((obj) => {
 
 exports.getDive = diveFetch;
 
+/**
+ * gets the dive object for a dive
+ * @param {string} code the code of the dive(e.g. 100A)
+ * @param {string} boardHeight the height of the board(e.g. 1M)
+ * @param {inter} inter a temporary method to not have this method run forever
+ */
 function diveFetch(code, boardHeight, inter = 0) {
     if (inter === 50) {
         return new Dive({

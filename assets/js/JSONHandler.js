@@ -12,6 +12,11 @@ module.exports.GetJSON = (file) => {
     });
 };
 
+/**
+ * Reads a text file and retuns a string
+ * @param {string} file path of the file
+ * @return {string} the file contents
+ */
 function readTextFile(file) {
     return new Promise(resolve => {
         var rawFile = new XMLHttpRequest();
