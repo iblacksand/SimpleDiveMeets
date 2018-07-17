@@ -1,5 +1,14 @@
 var $ = require('jquery');
 
+document.addEventListener('DOMContentLoaded', function () {
+    var datePickers = bulmaCalendar.attach('[type="date"]', {
+      overlay: false,
+      minDate: '2000-01-01',
+      maxDate: '3000-12-31'
+    });
+    // datePickers now contains an Array of all datePicker instances
+  });
+
 var totalevents = 1;
 
 function init(){
@@ -63,13 +72,3 @@ function makeActive(li){
     $(li).addClass("is-active");
     liID = li;
 }
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    var datePickers = bulmaCalendar.attach('[type="date"]', {
-      overlay: true,
-      minDate: '2018-01-01',
-      maxDate: '2018-12-31'
-    });
-    // datePickers now contains an Array of all datePicker instances
-  });
