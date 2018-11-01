@@ -26,6 +26,7 @@
     "jquery": "^3.3.1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.4.2",
     "electron": "^1.8.4",
     "electron-builder": "^19.56.2",
     "electron-packager": "^11.1.0"

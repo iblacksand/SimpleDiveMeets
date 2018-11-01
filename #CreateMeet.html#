@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="./node_modules/bulma-extensions/bulma-calendar/dist/css/bulma-calendar.min.css">
+    <link rel="stylesheet" type="text/css" href="./font-awesome.min.css">
+    <script src="./node_modules/bulma-extensions/bulma-calendar/dist/js/bulma-calendar.min.js"></script>
+</head>
+
+<body>
+
+        <div class="tabs is-boxed">
+                <ul>
+                  <li class="is-active" id="li1">
+                    <a onclick="showPage('#name-page');makeActive('#li1')">
+                      <span>Meet Information</span>
+                    </a>
+                  </li>
+                  <li id="li2">
+                    <a onclick="showPage('#event-page');makeActive('#li2')" disabled>
+                      <span>Events</span>
+                    </a>
+                  </li>
+                  <li id="li3" onclick="showPage('#final-page');makeActive('#li3')" disabled>
+                    <a>
+                      <span>Finalize Meet</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+
+    <div class="container is-fluid">
+            <div class="field" id="name-page">
+                <label class="label" for="meet-name">Meet Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Meet Name" id="meet-name">
+                </div>
+                <div>
+                    <label class="label" for="meet-date">Date of event</label>
+                    <input id="meet-date" class="input" type="date"/>
+                </div>
+            </div>
+            <div class="field" id="event-page">
+                <label class="label">Events</label>
+                <div class="field">
+                    <div class="field has-addons" id="last-eventdiv" style="display:flex;justify-content:center;align-items:center;" position="0">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Event Name">
+                        </div>
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>1M</option>
+                                    <option>3M</option>
+                                </select>
+                            </div>
+                        </div>
+			
+                    </div>
+                </div>
+                <div class="control">
+                    <a class="button" onclick="addNewEvent()">Add Event</a>
+                </div>
+            </div>
+            <div class="field" id="final-page"></div>
+    </div>
+    </form>
+    </div>
+    <script src="./assets/js/CreateMeet.js"></script>
+</body>
+
+</html>

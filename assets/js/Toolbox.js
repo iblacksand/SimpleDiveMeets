@@ -7,3 +7,7 @@ exports.getParam = (name, url) => {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 };
+
+exports.writeFile() => {
+  return;
+}

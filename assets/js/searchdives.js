@@ -3,8 +3,7 @@ const {app, BrowserWindow, win} = require('electron');
 var $ = require('jquery');
 
 $('#searchbox').on('change', search);
-$('#searchbutton'
-).on('click', search);
+$('#searchbutton').on('click', search);
 
 /**
  * gets the value of a parameter
@@ -29,7 +28,6 @@ readTextFile("./data/DiveList.json", function(text){
 });
 
 document.getElementById('searchbox').onchange = search;
-set();
 
 var options = {
   shouldSort: true,

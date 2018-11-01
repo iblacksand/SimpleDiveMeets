@@ -1,4 +1,13 @@
 var $ = require('jquery');
 const Toolbox = require('./assets/js/Toolbox.js');
 
-var isFirst = (Toolbox.getParam("isFirstTime") === 'true');
+var isNewEvent = (Toolbox.getParam("NewEvent") === 'true');
+
+if(isNewEvent){
+    $("#diver-button").hide();
+}
+
+
+
+
+
