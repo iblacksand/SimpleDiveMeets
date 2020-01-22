@@ -1,6 +1,6 @@
 # Simple Dive Meets
 
-| Windows | Linux/Mac | Codacy Grade |
+| Windows | Linux/Mac | Code Upkeep |
 |---------|-----------|--------------|
 | [![Build status](https://ci.appveyor.com/api/projects/status/h3sjba5d46oyrugq?svg=true)](https://ci.appveyor.com/project/iblacksand/simpledivemeets) | [![Build Status](https://travis-ci.org/iblacksand/SimpleDiveMeets.svg?branch=master)](https://travis-ci.org/iblacksand/SimpleDiveMeets)        |      [![Codacy Badge](https://api.codacy.com/project/badge/Grade/70cdb2eca87f47508172bd14faf7fe6c)](https://www.codacy.com/app/elizarrj27/SimpleDiveMeets?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iblacksand/SimpleDiveMeets&amp;utm_campaign=Badge_Grade) [![Greenkeeper badge](https://badges.greenkeeper.io/iblacksand/SimpleDiveMeets.svg)](https://greenkeeper.io/)       |
 
