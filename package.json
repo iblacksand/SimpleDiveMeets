@@ -28,7 +28,7 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
     "electron": "^7.1.3",
-    "electron-builder": "^21.2.0",
+    "electron-builder": "^22.2.0",
     "electron-packager": "^14.1.1"
   },
   "dist": "npm run build && build --publish onTagOrDraft",
