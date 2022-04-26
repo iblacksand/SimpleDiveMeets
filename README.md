@@ -1,4 +1,8 @@
-# Simple Dive Meets
+# Simple Dive Meets DEPRECIATED
+
+**THIS PROJECT IS NO LONGER BEING WORKED ON**
+
+Electron is too bloated for this purpose. However, a new program will be made that improves upon all the features of [DiveRunner](https://github.com/iblacksand/DiveRunner), but with a web server and the ability for divers and coaches to propose changes to their divelists.
 
 | Windows | Linux/Mac | Code Upkeep |
 |---------|-----------|--------------|
