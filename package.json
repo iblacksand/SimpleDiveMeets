@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
-    "electron": "^9.4.0",
+    "electron": "^15.5.5",
     "electron-builder": "^21.2.0",
     "electron-packager": "^14.1.1"
   },
